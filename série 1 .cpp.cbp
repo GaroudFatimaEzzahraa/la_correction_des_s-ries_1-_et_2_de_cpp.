@@ -1,40 +1,272 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="exercices.cpp" />
-		<Option pch_mode="2" />
-		<Option compiler="gcc" />
-		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/exercices.cpp" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/exercices.cpp" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-			<Add option="-fexceptions" />
-		</Compiler>
-		<Unit filename="main.cpp" />
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
-	</Project>
-</CodeBlocks_project_file>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //EXERCICE9
+
+ /*  int n ,i;
+    cout<< "Entrer un nombre :";
+    cin>> n;
+    for (i=1 ; i<=n ; i++)
+     {
+
+         cout<<" 1/" <<i;
+     }
+        return 0;
+}*/
+
+
+
+
+   // EXERCICE10:
+
+   /* int n , i , u1 , u2 ,u ;
+
+    u1 = 1 ;
+    u2 = 1 ;
+
+    cout << "entrer la valeur de n :";
+    cin >> n ;
+    for(i=3 ; i<=n ; i++)
+    {
+        u = u1 + u2 ;
+        u1 = u2 ;
+        u2 =u ;
+    }
+    cout<<"u = "<<u ;*/
+
+
+
+   // EXERCICE11:
+
+  /* int L ,i ,j,k;
+   cout<< "veuillez saisir le nombre de lignes : ";
+   cin>> L;
+   for(i=1 ; i<=L ; i++)
+    {
+        for(j=1; j<=L-i ; j++)
+
+            cout<<" ";
+
+        for(k=1 ; k<=i+i-1 ; k++)
+           cout<<"*";
+
+        cout<<endl;
+    }
+    return 0;
+    }*/
+
+
+//Exercice12
+
+
+int k=1 ,j , M=0 ,i=1;
+   cout<< "   I ";
+
+
+    for(j=1 ;j<=10 ;j++)
+          cout<< j<<" ";
+
+      cout<<endl;
+
+    for(j=1 ;j<=10 ;j++)
+    {
+        cout<< "---";
+    }
+
+
+     cout<<endl;
+   for (i=1 ; i<=10; i++)
+   {
+     cout<<i;
+     cout<< "  I ";
+
+       for(j=1 ;j<=10 ;j++){
+        M = i*j;
+        cout<< M << " ";
+       }
+    cout<<endl;
+   }
+
+     return 0;
+}
+
+// Exercice 13:
+//1:pour simuler un lancer de des en informatique ,nous pouvons utiliser la fonction rand() pour generer un nombre aleatoire entre 1 et 6 (pour un de a six faces) .
+
+//2:
+/*#include<cstdlib>
+#include<ctime>
+
+int throwDice()
+{
+   long x ;
+   float y;
+
+    x = rand() % 6 ;    // en divison par 6 pour l'obtention d'un nombre reel appartenant a [0 ; 6[
+    y = x + 1;          //car si on ajoute 1 a x , on obtient un nombre entier y
+    return y;
+}
+
+//3:le tour d'un seul joueur
+#include<iostream>
+using namespace std ;
+
+int playerTurn()
+ {
+      int choix , i;
+      int resultat=0 , score=0;
+
+  //demande au joueur s'il veut lancer 1 ou 2 des
+
+  do{
+     cout<<"voulez-vous lancer 1 ou 2 des ? : ";
+     cin>>choix;
+  }while(choix !=1 && choix !=2);
+
+  // lancer de de(s)
+
+  for (i=0 ; i< choix ; i++)
+  {
+      resultat += throwDice();
+  }
+      cout << "lancer de de " << i <<": " << resultat << endl;
+           score = score + resultat ;
+  //verifier si les des ont la meme resultat
+    if (choix == 2 && throwDice()== throwDice())
+    {
+        score = score * (-1);
+        cout << "les deux lancer ont le meme resultat donc le score est deminue" <<endl;
+    }
+
+   return score;
+ }
+ int main()
+ {
+     srand(time(0));   //generateur de nombres aleatoires
+
+     int score1=0 , score2=0 ;
+
+     while (score1 < 30 && score2 < 30)
+     {
+
+         score1 += playerTurn();
+         cout << "le score du joueur 1 est  "<<score1 << endl ;
+
+
+         if (score1 >= 30)
+            break;
+
+         score2 += playerTurn();
+         cout<< "le score deu joueur 2 est  "<<score2 <<endl;
+
+
+         if (score2 >= 30)
+            break;
+
+     }
+     //la determination du gagnant
+
+     if (score1 >= 30)
+        cout << "le joueur 1 a gagne "<<endl;
+
+     if (score2 >= 30)
+        cout << "le joueur 2 a gagne "<<endl;
+
+     if (score1 >=30 && score2 >=30)
+        cout << "Mutch nul " <<endl;
+
+    return 0;
+ }*/
+//EXERCICE 13 :           	DEVOIR
+//1 :  pour simuler un lancer de dés en informatique, nous pouvons utiliser la fonction rand() pour générer un nombre aléatoire entre 1 et 6 (pour un dé à six faces) .
+
+//2:
+/*
+#include<cstdlib>
+#include<ctime>
+
+int throwDice()
+{
+   long x ;
+   float y;
+
+     x = rand() % 6 ;    // en divise par 6 pour l'obtention d'un nombre réel appartenant à [0 ; 6[
+     y = x + 1;              //car si on ajoute 1 à x , on obtient un nombre entier y
+	return y;
+}
+
+//3 :  le tour d'un seul joueur
+#include<iostream>
+using namespace std;
+
+int playerTurn()
+ {
+  	int choix , i;
+  	int resultat=0 , score=0;
+
+  //demande au joueur s'il veut lancer 1 ou 2 dés
+
+  do{
+ 	cout<<"voulez-vous lancer 1 ou 2 dés ? : ";
+ 	cin>>choix;
+  }while(choix !=1 && choix !=2);
+
+// lancer de dé(s)
+
+  for (i=0 ; i< choix ; i++)
+  {
+  	resultat += throwDice();
+  }
+  	cout << "lancer de dé " << i <<": " << resultat << endl;
+       	score = score + resultat ;
+  //vérifier si les dés ont la même resultat
+	if (choix == 2 && throwDice()== throwDice())
+	{
+    	score = score * (-1);
+    	cout << "les deux lancés ont le même résultat donc le score est diminué" <<endl;
+	}
+
+   return score;
+ }
+ int main()
+ {
+     srand(time(0));       // générateur de nombres aléatoires
+
+ 	int score1=0, score2=0;
+
+ 	while (score1 < 30 && score2 < 30)
+ 	{
+
+     	score1 += playerTurn();
+     	cout << "le score du joueur 1 est  "<<score1 << endl ;
+
+
+     	if (score1 >= 30)
+        	break;
+
+     	score2 += playerTurn();
+     	cout<< "le score du joueur 2 est  "<<score2 <<endl;
+
+
+     	if (score2 >= 30)
+        	break;
+
+ 	}
+ 	//la détermination du gagnant
+
+ 	if (score1 >= 30)
+    	cout << "le joueur 1 à gagné "<<endl;
+
+ 	if (score2 >= 30)
+    	cout << "le joueur 2 à gagné "<<endl;
+
+ 	if (score1 >=30 && score2 >=30)
+    	cout << "Mutch nul " <<endl;
+
+	return 0;
+
+ }
+*/
