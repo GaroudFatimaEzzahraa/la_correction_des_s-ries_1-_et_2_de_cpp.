@@ -6,15 +6,17 @@ int main()
 {
     //EXERCICE9
 
- /*  int n ,i;
+ /* int n ,i;
     cout<< "Entrer un nombre :";
     cin>> n;
-    for (i=1 ; i<=n ; i++)
+    for (i=1 ; i<n ; i++)
      {
 
-         cout<<" 1/" <<i;
+         cout<<" 1/" <<i<<"+";
      }
+     cout<<" 1/"<<n ;
         return 0;
+}
 }*/
 
 
