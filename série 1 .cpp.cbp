@@ -6,7 +6,9 @@ int main()
 {
     //EXERCICE9
 
- /* int n ,i;
+ /*  int n ,i;
+   float s = 0 ;
+   cout<<"affichage de la serie "<<endl;
     cout<< "Entrer un nombre :";
     cin>> n;
     for (i=1 ; i<n ; i++)
@@ -14,9 +16,16 @@ int main()
 
          cout<<" 1/" <<i<<"+";
      }
-     cout<<" 1/"<<n ;
+     cout<<" 1/"<<n <<endl ;
+     cout<<"calcule de la somme de la serie ";
+      for (i=1 ; i<=n ; i++)
+      {
+          s +=(float) 1/i ;
+      }
+      cout<<"la somme de la serie harmonique est : "<<s;
         return 0;
 }
+
 }*/
 
 
